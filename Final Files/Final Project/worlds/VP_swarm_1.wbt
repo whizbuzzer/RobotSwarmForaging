@@ -1,0 +1,642 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 1 0 0 4.71238898038469
+  position 1.635403185701661e-16 14.609550297216902 -2.5787625783161533e-16
+  followType "None"
+}
+Background {
+}
+DirectionalLight {
+  ambientIntensity 1
+  direction -1 -1 -1
+  intensity 2
+  castShadows TRUE
+}
+RectangleArena {
+  floorSize 4 5
+}
+DEF FOOD Robot {
+  translation 1.09854e-18 0.0496918 2
+  rotation 1 2.94837e-08 1.04363e-09 4.692820414042842e-06
+  children [
+    Emitter {
+      range 0.15
+      channel 1
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.1
+        radius 0.04
+      }
+    }
+  ]
+  name "food"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.04
+  }
+  physics Physics {
+  }
+  controller "emitter_controller"
+}
+DEF puck_original E-puck {
+  translation -1.8659 -6.3959e-05 -1.8871
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation -1.63438 -6.3959e-05 -1.66247
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(1)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation -1.35082 -6.3959e-05 -1.8517
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(2)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation -1.11932 -6.3959e-05 -1.64677
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(3)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation -0.908065 -6.3959e-05 -1.86876
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(4)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation -0.61741 -6.3959e-05 -1.63107
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(5)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation -0.412694 -6.3959e-05 -1.83334
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(6)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation -0.135216 -6.3959e-05 -1.62847
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(7)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation 0.102301 -6.3959e-05 -1.86363
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(8)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation 0.386445 -6.3959e-05 -1.57994
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(9)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation 0.623896 -6.3959e-05 -1.86765
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(10)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation 0.881751 -6.3959e-05 -1.59707
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(11)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation 1.09299 -6.3959e-05 -1.83876
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(12)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation 1.37707 -6.3959e-05 -1.60106
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(13)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation 1.63427 -6.3959e-05 -1.85595
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(14)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF puck_original E-puck {
+  translation 1.84611 -6.3959e-05 -1.61158
+  rotation -5.709959734055212e-05 0.9999999534244044 -0.00029981798603579806 3.14
+  name "e-puck(15)"
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Receiver {
+      name "r2r_receiver"
+      channel 1
+    }
+    Emitter {
+      children [
+        Transform {
+          children [
+            Shape {
+              appearance PBRAppearance {
+                baseColor 0 0.333333 1
+                transparency 0.97
+                roughness 1
+                metalness 0
+              }
+              geometry Sphere {
+                radius 0.17
+              }
+            }
+          ]
+        }
+      ]
+      name "r2r_emitter"
+      range 0.17
+      channel 1
+    }
+  ]
+}
+DEF NEST Robot {
+  translation 4.55731e-18 0.0496918 -2
+  rotation -0.9382273081400313 0.3456084626879323 0.016861458382796058 -9.521337121427981e-16
+  children [
+    Emitter {
+      name "nest_emitter"
+      range 0.15
+      channel 1
+    }
+    Receiver {
+      name "nest_receiver"
+      channel 2
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.1
+        radius 0.04
+      }
+    }
+  ]
+  name "nest"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.04
+  }
+  physics Physics {
+  }
+  controller "receiver_controller"
+}

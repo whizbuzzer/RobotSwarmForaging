@@ -1,0 +1,102 @@
+#VRML_SIM R2020b utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 1 0 0 4.71238898038469
+  position 0.05966826459170175 2.6610485621266613 -0.02492577121577705
+  follow "e-puck_1"
+}
+Background {
+}
+DirectionalLight {
+  ambientIntensity 1
+  direction -1 -1 -1
+  intensity 2
+  castShadows TRUE
+}
+RectangleArena {
+  floorSize 2 2
+}
+DEF FOOD Robot {
+  translation 1.0985392167435799e-18 0.049691809760673465 0.5
+  rotation -0.8342440280763697 0.5510503041888453 0.019505483134092026 -1.0261940677416871e-15
+  children [
+    Emitter {
+      range 0.15
+      channel 1
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 1
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.1
+        radius 0.04
+      }
+    }
+  ]
+  name "food"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.04
+  }
+  physics Physics {
+  }
+  controller "emitter_controller"
+}
+DEF puck_original E-puck {
+  translation 0.17702253440964966 -6.395903152702463e-05 -0.026754398879152524
+  rotation -0.0015389982654244873 0.9999987727880854 0.0002930983827056772 0.3848072404277173
+  controller "my_controller"
+  emitter_channel 2
+  turretSlot [
+    Emitter {
+      range 0.17
+      channel 1
+    }
+  ]
+}
+E-puck {
+  translation -0.3448919999514189 -6.396824013199694e-05 0.30900400008400963
+  rotation -3.915518208400374e-06 -0.9999999999336285 -1.0835670284530893e-05 -0.5235953072253423
+  name "e-puck_1"
+  controller ""
+  emitter_channel 2
+}
+DEF NEST Robot {
+  translation 4.557312828325034e-18 0.049691809760673465 -0.5
+  rotation -0.9382273081400313 0.3456084626879323 0.016861458382796058 -9.521337121427981e-16
+  children [
+    Emitter {
+      name "nest_emitter"
+      range 0.15
+      channel 1
+    }
+    Receiver {
+      name "nest_receiver"
+      channel 2
+    }
+    Shape {
+      appearance PBRAppearance {
+        baseColor 0 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.1
+        radius 0.04
+      }
+    }
+  ]
+  name "nest"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.04
+  }
+  physics Physics {
+  }
+  controller "receiver_controller"
+}
